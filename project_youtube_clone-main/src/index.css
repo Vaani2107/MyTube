@@ -1,0 +1,97 @@
+/* 1. Global Document Resets & Base Configuration */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0f0f0f; /* Locked default premium dark canvas background */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* 2. Intelligent Link Resets for Dark Theme Engine */
+a {
+  text-decoration: none;
+  color: inherit; /* Swapped 'black' for inherit to prevent text blending into dark UI elements */
+}
+
+/* 3. Sleek Micro-Scrollbar UI System */
+::-webkit-scrollbar {
+  width: 6px; /* Enhanced from 0px for a premium, minimal scroll overlay indicator */
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent modern thumb core */
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* 4. Renamed Component Framework (.category-btn shifted to .feed-pill) */
+.feed-pill {
+  font-weight: 600 !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 8px 18px;
+  margin: 10px 0px;
+  border-radius: 24px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother premium animation response */
+}
+
+/* 5. Custom Brand Color Accent Layer (Shifted away from generic YouTube Red) */
+.feed-pill:hover {
+  background-color: #00b0ff !important; /* Premium Electric Blue variant accent */
+  color: #ffffff !important;
+}
+
+.feed-pill:hover span {
+  color: #ffffff !important;
+}
+
+/* 6. Video Interface & Global Native Search Components */
+.react-player {
+  height: 75vh !important; /* Clean cinematic desktop video view ratios */
+  width: 100% !important;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  width: 360px;
+  background: transparent;
+}
+
+/* 7. Strategic Layout Media Breakpoints */
+@media screen and (max-width: 900px) {
+  .feed-pill {
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .copyright-notice {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow-x: auto !important;
+  }
+
+  .react-player {
+    height: 40vh !important; /* Adjusted responsive ratio sizing constraint for smartphone viewports */
+  }
+  
+  .search-bar {
+    width: 180px;
+  }
+}
